@@ -22,13 +22,13 @@
 		<rotation x="0" y="0" z="0" w="1"></rotation>
 		<scale x="1" y="1" z="1"></scale>
 	  </transform>
-	  <child xsi:type="lightentity" tag="Light">
+	  <entity xsi:type="lightentity" tag="Light">
 	    <transform xsi:type="scaletransform">
 	      <position x="0" y="75" z="0"></position>
 		  <rotation x="1" y="1" z="0" w="1"></rotation>
 		  <scale x="0" y="0" z="0"></scale>
         </transform>
-      </child>
+      </entity>
     </entity>
     <!--<entity xsi:type="canvasentity" tag="Controls">
         <transform xsi:type="scaletransform">
@@ -36,12 +36,43 @@
           <rotation x="1" y="1" z="0" w="1"></rotation>
           <scale x="1" y="1" z="1"></scale>
         </transform>
-        <child xsi:type="buttonentity" tag="Up">
+        <entity xsi:type="buttonentity" tag="Up">
           <transform xsi:type="canvastransform">
 	        <position-percent x="75" y="75"></position-percent>
 		    <size-percent x="10" y="10"></size-percent>
           </transform>
-		</child>
+		</entity>
     </entity>-->
+    <entity xsi:type="canvasentity" tag="Controls">
+        <transform xsi:type="scaletransform">
+          <position x="0" y="0" z="0"></position>
+          <rotation x="1" y="1" z="0" w="1"></rotation>
+          <scale x="1" y="1" z="1"></scale>
+        </transform>
+        <entity xsi:type="buttonentity" tag="Up" on-click-event="thirdPersonCharacter.MoveCharacterOneStep(0, 1);">
+          <transform xsi:type="canvastransform">
+	        <position-percent x="0.76" y="0.64"></position-percent>
+		    <size-percent x="0.1" y="0.1"></size-percent>
+          </transform>
+		</entity>
+		<entity xsi:type="buttonentity" tag="Down" on-click-event="thirdPersonCharacter.MoveCharacterOneStep(0, -1);">
+          <transform xsi:type="canvastransform">
+	        <position-percent x="0.76" y="0.88"></position-percent>
+		    <size-percent x="0.1" y="0.1"></size-percent>
+          </transform>
+		</entity>
+		<entity xsi:type="buttonentity" tag="Left" on-click-event="thirdPersonCharacter.MoveCharacterOneStep(-1, 0);">
+          <transform xsi:type="canvastransform">
+	        <position-percent x="0.64" y="0.76"></position-percent>
+		    <size-percent x="0.1" y="0.1"></size-percent>
+          </transform>
+		</entity>
+		<entity xsi:type="buttonentity" tag="Right" on-click-event="thirdPersonCharacter.MoveCharacterOneStep(1, 0);">
+          <transform xsi:type="canvastransform">
+	        <position-percent x="0.88" y="0.76"></position-percent>
+		    <size-percent x="0.1" y="0.1"></size-percent>
+          </transform>
+		</entity>
+    </entity>
   </environment>
 </veml>

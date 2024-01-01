@@ -43,7 +43,16 @@ class VOSSynchronizer {
             }
         `;
         
-        var result = VOSSynchronization.ConnectToService(this.host, this.port, this.tls, onConnectedAction);
+        var result = null;
+        if (this.transport === "tcp") {
+            result = VOSSynchronization.ConnectToService(this.host, this.port, this.tls, onConnectedAction, VSSTransport.TCP);
+        }
+        else if (this.transport === "websocket") {
+            result = VOSSynchronization.ConnectToService(this.host, this.port, this.tls, onConnectedAction, VSSTransport.WebSocket);
+        }
+        else {
+            Logging.LogError("[VOSSynchronization:Connect] Invalid transport.");
+        }
     }
     
     Disconnect() {
