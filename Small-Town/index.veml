@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <veml xmlns="http://www.fivesqd.com/schemas/veml/1.0" xsi:schemaLocation="http://www.fivesqd.com/schemas/veml/1.0 schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata>
-    <title>Simple Meshes Scene</title>
+    <title>Small Town</title>
     <script>../Sample-Libraries/VOS-Synchronization/vossynchronization.js</script>
     <script>../Sample-Libraries/Third-Person-Character/thirdpersoncharacter.js</script>
     <script>Scripts/index.js</script>
@@ -15,11 +15,11 @@
       <panorama>Images/night.png</panorama>
     </background>
     <entity xsi:type="meshentity" tag="Environment">
-	  <mesh-name>Models/test.glb</mesh-name>
+	  <mesh-name>Models/smalltown.glb</mesh-name>
 	  <mesh-resource>Models/test.glb</mesh-resource>
 	  <transform xsi:type="scaletransform">
 	    <position x="0" y="0" z="0"></position>
-		<rotation x="0" y="0" z="0" w="1"></rotation>
+		<rotation x="0.7071" y="0" z="0" w="0.7071"></rotation>
 		<scale x="1" y="1" z="1"></scale>
 	  </transform>
 	  <entity xsi:type="lightentity" tag="Light">

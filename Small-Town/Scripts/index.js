@@ -13,8 +13,8 @@ const FOCUSEDSYNCHRONIZATIONPARAMS = {
 };
 
 const SESSIONINFO = {
-    id: "ba8e3de0-4a5d-4ca8-9841-ae78fb12e0a4",
-    tag: "test"
+    id: "ee4e5eb7-da1b-4722-b0a8-4fbe87dbb517",
+    tag: "city"
 };
 
 let characterSynchronized = false;
