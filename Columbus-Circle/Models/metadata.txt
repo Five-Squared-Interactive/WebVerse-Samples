@@ -1,0 +1,5 @@
+Model Download Metadata File
+============================
+Model downloaded by: Geopipe Demos (chris.deguise+prod-demo@geopi.pe)
+S2 base point: s = 0.041687, t = 0.682037, face = 4.000000, up = 0.000000
+Geographic base point: 40.773431, -73.991818 altitude 0.000000

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<veml xmlns="http://www.fivesqd.com/schemas/veml/1.0" xsi:schemaLocation="http://www.fivesqd.com/schemas/veml/1.0 schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <title>Rockefeller Plaza</title>
+    <script>../Sample-Libraries/VOS-Synchronization/vossynchronization.js</script>
+    <script>../Sample-Libraries/Third-Person-Character/thirdpersoncharacter.js</script>
+    <script>Scripts/index.js</script>
+    <inputevent input="move" event="thirdPersonCharacter.MoveCharacter(?);"></inputevent>
+    <inputevent input="endmove" event="thirdPersonCharacter.EndMoveCharacter();"></inputevent>
+	<inputevent input="look" event="thirdPersonCharacter.LookCharacter(?);"></inputevent>
+	<inputevent input="endlook" event="thirdPersonCharacter.EndLookCharacter();"></inputevent>
+  </metadata>
+  <environment>
+    <background>
+      <panorama>Images/night.png</panorama>
+    </background>
+    <entity xsi:type="meshentity" tag="Environment">
+	  <mesh-name>Models/model-0-0.glb</mesh-name>
+	  <mesh-resource>Models/model-0-0.glb</mesh-resource>
+	  <transform xsi:type="scaletransform">
+	    <position x="500" y="-20" z="-500"></position>
+		<rotation x="-0.7071" y="0" z="0" w="0.7071"></rotation>
+		<scale x="1" y="1" z="1"></scale>
+	  </transform>
+	  <entity xsi:type="lightentity" tag="Light">
+	    <transform xsi:type="scaletransform">
+	      <position x="0" y="75" z="0"></position>
+		  <rotation x="1" y="1" z="0" w="1"></rotation>
+		  <scale x="0" y="0" z="0"></scale>
+        </transform>
+      </entity>
+    </entity>
+    <entity xsi:type="meshentity" tag="Environment">
+	  <mesh-name>Models/model-0-1.glb</mesh-name>
+	  <mesh-resource>Models/model-0-1.glb</mesh-resource>
+	  <transform xsi:type="scaletransform">
+	    <position x="500" y="-20" z="-500"></position>
+		<rotation x="-0.7071" y="0" z="0" w="0.7071"></rotation>
+		<scale x="1" y="1" z="1"></scale>
+	  </transform>
+      </entity>
+    </entity>
+    <!--<entity xsi:type="canvasentity" tag="Controls">
+        <transform xsi:type="scaletransform">
+          <position x="0" y="0" z="0"></position>
+          <rotation x="1" y="1" z="0" w="1"></rotation>
+          <scale x="1" y="1" z="1"></scale>
+        </transform>
+        <entity xsi:type="buttonentity" tag="Up">
+          <transform xsi:type="canvastransform">
+	        <position-percent x="75" y="75"></position-percent>
+		    <size-percent x="10" y="10"></size-percent>
+          </transform>
+		</entity>
+    </entity>-->
+    <entity xsi:type="canvasentity" tag="Controls">
+        <transform xsi:type="scaletransform">
+          <position x="0" y="0" z="0"></position>
+          <rotation x="1" y="1" z="0" w="1"></rotation>
+          <scale x="1" y="1" z="1"></scale>
+        </transform>
+        <entity xsi:type="buttonentity" tag="Up" on-click-event="thirdPersonCharacter.MoveCharacterOneStep(1, 0);">
+          <transform xsi:type="canvastransform">
+	        <position-percent x="0.76" y="0.64"></position-percent>
+		    <size-percent x="0.1" y="0.1"></size-percent>
+          </transform>
+		</entity>
+		<entity xsi:type="buttonentity" tag="Down" on-click-event="thirdPersonCharacter.MoveCharacterOneStep(-1, 0);">
+          <transform xsi:type="canvastransform">
+	        <position-percent x="0.76" y="0.88"></position-percent>
+		    <size-percent x="0.1" y="0.1"></size-percent>
+          </transform>
+		</entity>
+		<entity xsi:type="buttonentity" tag="Left" on-click-event="thirdPersonCharacter.MoveCharacterOneStep(0, 1);">
+          <transform xsi:type="canvastransform">
+	        <position-percent x="0.64" y="0.76"></position-percent>
+		    <size-percent x="0.1" y="0.1"></size-percent>
+          </transform>
+		</entity>
+		<entity xsi:type="buttonentity" tag="Right" on-click-event="thirdPersonCharacter.MoveCharacterOneStep(0, -1);">
+          <transform xsi:type="canvastransform">
+	        <position-percent x="0.88" y="0.76"></position-percent>
+		    <size-percent x="0.1" y="0.1"></size-percent>
+          </transform>
+		</entity>
+    </entity>
+  </environment>
+</veml>
