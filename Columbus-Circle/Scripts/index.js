@@ -13,8 +13,8 @@ const FOCUSEDSYNCHRONIZATIONPARAMS = {
 };
 
 const SESSIONINFO = {
-    id: "ba8e3de0-4a5d-4ca8-9841-ae78fb12e0a4",
-    tag: "test"
+    id: "7f9f8c8e-0aac-4fbc-99fe-00d4a654f8a9",
+    tag: "ColumbusCircle"
 };
 
 let characterSynchronized = false;

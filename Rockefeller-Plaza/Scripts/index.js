@@ -13,8 +13,8 @@ const FOCUSEDSYNCHRONIZATIONPARAMS = {
 };
 
 const SESSIONINFO = {
-    id: "ba8e3de0-4a5d-4ca8-9841-ae78fb12e0a4",
-    tag: "test"
+    id: "94ffff67-b3c0-4977-98a6-729725f22d17",
+    tag: "RockefellerPlaza"
 };
 
 let characterSynchronized = false;

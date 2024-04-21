@@ -16,7 +16,7 @@
     </background>
     <entity xsi:type="meshentity" tag="Environment">
 	  <mesh-name>Models/smalltown.glb</mesh-name>
-	  <mesh-resource>Models/test.glb</mesh-resource>
+	  <mesh-resource>Models/smalltown.glb</mesh-resource>
 	  <transform xsi:type="scaletransform">
 	    <position x="0" y="0" z="0"></position>
 		<rotation x="0.7071" y="0" z="0" w="0.7071"></rotation>
