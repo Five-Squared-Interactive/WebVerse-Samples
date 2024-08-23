@@ -1,6 +1,12 @@
 /// @file thirdpersoncharacter.js
 /// Module for a third person character.
 
+function FinishLoadingCharacter(character) {
+    var context = Context.GetContext("thirdPersonCharacterContext");
+    context.characterEntity = Entity.Get(context.characterEntityID);
+    context.OnLoaded();
+}
+
 class ThirdPersonCharacter {
     constructor(name, id = null, minZ = -90, maxZ = 90, motionMultiplier = 0.1, rotationMultiplier = 0.1, position = Vector3.zero, onLoaded = null, mode = "desktop") {
         this.minZ = minZ;
@@ -27,7 +33,7 @@ class ThirdPersonCharacter {
             if (onLoaded != null) {
                 onLoaded();
             }
-            context = Context.GetContext("thirdPersonCharacterContext");
+            var context = Context.GetContext("thirdPersonCharacterContext");
             if (mode === "vr") {
                 Camera.AddCameraFollower(context.characterEntity);
                 context.characterEntity.SetVisibility(false);
@@ -35,6 +41,17 @@ class ThirdPersonCharacter {
             else {
                 context.characterEntity.SetVisibility(true);
             }
+        }
+        
+        this.GetPosition = function() {
+            if (this.characterEntityID != null) {
+                var ce = Entity.Get(this.characterEntityID);
+                if (ce != null) {
+                    return ce.GetPosition(false);
+                }
+            }
+            
+            return Vector3.zero;
         }
         
         /// @function ThirdPersonCharacter.Update
@@ -63,17 +80,10 @@ class ThirdPersonCharacter {
             }
         }
         
-        var onLoadedAction =
-        `
-            var context = Context.GetContext("thirdPersonCharacterContext");
-            context.characterEntity = Entity.Get(context.characterEntityID);
-            context.OnLoaded();
-        `;
-        
         Context.DefineContext("thirdPersonCharacterContext", this);
         
         this.characterEntity = CharacterEntity.Create(null, position,
-            Quaternion.identity, Vector3.one, false, name, this.characterEntityID, onLoadedAction);
+            Quaternion.identity, Vector3.one, false, name, this.characterEntityID, "FinishLoadingCharacter");
         Context.DefineContext("thirdPersonCharacterContext", this);
         if (mode === "vr") {
             Camera.SetPosition(position, false);

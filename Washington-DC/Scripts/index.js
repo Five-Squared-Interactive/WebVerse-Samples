@@ -13,8 +13,8 @@ const FOCUSEDSYNCHRONIZATIONPARAMS = {
 };
 
 const SESSIONINFO = {
-    id: "ba8e3de0-4a5d-4ca8-9841-ae78fb12e0a4",
-    tag: "test"
+    id: "8b529ad6-7bc7-407d-a644-b5fe4096c5ca",
+    tag: "WashingtonDC"
 };
 
 let characterSynchronized = false;
@@ -90,7 +90,7 @@ function SetButtonControls() {
         controlsEntity.SetVisibility(true);
     }
     else {
-        controlsEntity.setVisibility(false);
+        controlsEntity.SetVisibility(false);
     }
 }
 

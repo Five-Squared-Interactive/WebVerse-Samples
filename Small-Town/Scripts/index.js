@@ -90,7 +90,7 @@ function SetButtonControls() {
         controlsEntity.SetVisibility(true);
     }
     else {
-        controlsEntity.setVisibility(false);
+        controlsEntity.SetVisibility(false);
     }
 }
 
